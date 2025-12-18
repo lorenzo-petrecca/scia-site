@@ -1,0 +1,203 @@
+<h1 id="intro" class="docs-title scia-typo-uppercase scia-typo-normal scia-typo-black">Themes</h1>
+
+<p class="intro">
+Tokens are the foundation of Scia CSS.
+
+They are **CSS custom properties** (variables) defined in <code class="scia-code">:root</code>, used by components and utilities to stay consistent and themeable. Instead of hardcoding values (px, colors, shadows…), Scia CSS references tokens.
+
+This makes it easy to:
+- keep the design consistent
+- override the look per project
+- evolve the framework without rewriting components
+
+Scia CSS defines token groups for typography, radii, shadows, transitions and spacing.
+</p>
+
+<br/>
+
+### Where tokens live
+
+All tokens are defined under <code class="scia-code">:root</code> blocks in <code class="scia-code">scia-tokens.css</code>, using multiple <code class="scia-code">`:root { ... }`</code>.
+
+<br/>
+---
+
+
+
+
+
+<h2 id="how-override" class="scia-h2 docs-subtitle">How to override tokens in your project</h2>
+
+To customize Scia CSS, override tokens **after** importing Scia CSS.
+
+```css
+:root {
+  --scia-radius-md: 1rem;
+  --scia-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+```
+
+<div class="scia-blockquote-warning">
+<p class="blockquote-paragraph">Color tokens are usually handled in the **Themes** page (because they have light/dark/auto structure). This page focuses on the shared, non-color system tokens.</p>
+</div>
+
+<br/>
+---
+
+
+
+
+
+<h2 id="typography-tokens" class="scia-h2 docs-subtitle">Typography tokens</h2>
+
+Scia CSS defines a default sans font stack and a set of text sizes and font weights.
+
+<br/>
+
+### Font family
+
+| Token| Value|
+| :-- | :-- |
+| <code class="scia-code">--scia-font-sans</code> | <code class="scia-code">system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif</code>|
+
+<br/>
+<br/>
+
+### Text sizes
+
+|Token| Value| (px)|
+| :-- | --: | --: |
+| <code class="scia-code">--scia-text-2xs</code>  |   1rem |         10px |
+| <code class="scia-code">--scia-text-xs</code>   | 1.2rem |         12px |
+| <code class="scia-code">--scia-text-sm</code>   | 1.4rem |         14px |
+| <code class="scia-code">--scia-text-base</code> | 1.6rem |         16px |
+| <code class="scia-code">--scia-text-lg</code>   | 1.8rem |         18px |
+| <code class="scia-code">--scia-text-xl</code>   |   2rem |         20px |
+| <code class="scia-code">--scia-text-2xl</code>  | 2.4rem |         24px |
+| <code class="scia-code">--scia-text-3xl</code>  |   3rem |         30px |
+| <code class="scia-code">--scia-text-4xl</code>  | 3.6rem |         36px |
+
+
+<div class="scia-blockquote-info">
+<p class="blockquote-paragraph">These are designed around a base where 1rem = 10px in your system (so 1.6rem = 16px).</p>
+</div>
+
+<br/>
+<br/>
+
+### Font weights
+
+| Token | Value |  |
+| :-- | ---: | :-- |
+| <code class="scia-code">--scia-fw-1</code> |    100 | thin              |
+| <code class="scia-code">--scia-fw-2</code> |    200 | extra-light       |
+| <code class="scia-code">--scia-fw-3</code> |    300 | light             |
+| <code class="scia-code">--scia-fw-4</code> |    400 | regular           |
+| <code class="scia-code">--scia-fw-5</code> |    500 | medium            |
+| <code class="scia-code">--scia-fw-6</code> |    600 | semibold          |
+| <code class="scia-code">--scia-fw-7</code> |    700 | bold              |
+| <code class="scia-code">--scia-fw-8</code> |    800 | extra-bold        |
+| <code class="scia-code">--scia-fw-9</code> |    900 | black             |
+
+Typography utilities and presets in scia-typo.css are built on top of these tokens.
+
+<br/>
+---
+
+
+
+
+
+<h2 id="radii-tokens" class="scia-h2 docs-subtitle">Radii tokens</h2>
+
+Radii tokens provide consistent rounding across components and utilities.
+
+|Token|Value|(px)|
+| :-- | --: | --: |
+| <code class="scia-code">--scia-radius-sm</code>   | 0.4rem |          4px |
+| <code class="scia-code">--scia-radius-md</code>   | 0.8rem |          8px |
+| <code class="scia-code">--scia-radius-lg</code>   | 1.2rem |         12px |
+| <code class="scia-code">--scia-radius-full</code> | 9999px |         pill |
+
+<br/>
+---
+
+
+
+
+
+<h2 id="shadow-tokens" class="scia-h2 docs-subtitle">Shadow tokens</h2>
+Scia CSS defines three levels of shadow.
+
+| Token              | Value                            |
+| :-- | :-- |
+| <code class="scia-code">--scia-shadow-sm</code> | <code class="scia-code">0 1px 2px rgba(0, 0, 0, 0.06)</code>  |
+| <code class="scia-code">--scia-shadow-md</code> | <code class="scia-code">0 2px 6px rgba(0, 0, 0, 0.12)</code>  |
+| <code class="scia-code">--scia-shadow-lg</code> | <code class="scia-code">0 4px 12px rgba(0, 0, 0, 0.18)</code> |
+
+<br/>
+---
+
+
+
+
+
+<h2 id="shadow-tokens" class="scia-h2 docs-subtitle">Transitions tokens</h2>
+These tokens define timing and easing so interactions feel consistent across the system.
+
+| Token                      | Value                                  |
+| :------------------------- | :------------------------------------- |
+| <code class="scia-code">--scia-transition-fast</code>   | <code class="scia-code">120ms</code>                                |
+| <code class="scia-code">--scia-transition-medium</code> | <code class="scia-code">200ms</code>                                |
+| <code class="scia-code">--scia-transition-slow</code>   | <code class="scia-code">300ms</code>                                |
+| <code class="scia-code">--scia-ease-default</code>      | <code class="scia-code">cubic-bezier(0.42, 0.00, 0.58, 1.00)</code> |
+
+<br/>
+---
+
+
+
+
+
+<h2 id="shadow-tokens" class="scia-h2 docs-subtitle">Spacing tokens</h2>
+
+| Token              |       rem |
+| :----------------- | --------: |
+| <code class="scia-code">--scia-space-0</code>   |       0 |
+| <code class="scia-code">--scia-space-4</code>   |  0.4rem |
+| <code class="scia-code">--scia-space-8</code>   |  0.8rem |
+| <code class="scia-code">--scia-space-12</code>  |  1.2rem |
+| <code class="scia-code">--scia-space-16</code>  |  1.6rem |
+| <code class="scia-code">--scia-space-20</code>  |  2.0rem |
+| <code class="scia-code">--scia-space-24</code>  |  2.4rem |
+| <code class="scia-code">--scia-space-28</code>  |  2.8rem |
+| <code class="scia-code">--scia-space-32</code>  |  3.2rem |
+| <code class="scia-code">--scia-space-36</code>  |  3.6rem |
+| <code class="scia-code">--scia-space-40</code>  |  4.0rem |
+| <code class="scia-code">--scia-space-48</code>  |  4.8rem |
+| <code class="scia-code">--scia-space-56</code>  |  5.6rem |
+| <code class="scia-code">--scia-space-64</code>  |  6.4rem |
+| <code class="scia-code">--scia-space-72</code>  |  7.2rem |
+| <code class="scia-code">--scia-space-80</code>  |  8.0rem |
+| <code class="scia-code">--scia-space-100</code> | 10.0rem |
+| <code class="scia-code">--scia-space-120</code> | 12.0rem |
+| <code class="scia-code">--scia-space-140</code> | 14.0rem |
+| <code class="scia-code">--scia-space-180</code> | 18.0rem |
+| <code class="scia-code">--scia-space-200</code> | 20.0rem |
+| <code class="scia-code">--scia-space-240</code> | 24.0rem |
+| <code class="scia-code">--scia-space-300</code> | 30.0rem |
+
+<br/>
+---
+
+
+
+
+
+<h2 id="shadow-tokens" class="scia-h2 docs-subtitle">Recommended approach</h2>
+
+- Treat tokens as the single source of truth.
+- Prefer utilities/components that reference tokens rather than creating one-off values.
+- Override tokens per project instead of editing Scia CSS source files.
+
+For color tokens and light/dark/auto theme structure, see the [Themes documentation](/docs/themes).

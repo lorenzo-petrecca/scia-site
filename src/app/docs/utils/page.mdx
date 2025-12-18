@@ -1,0 +1,327 @@
+<h1 id="intro" class="docs-title scia-typo-uppercase scia-typo-normal scia-typo-black">Utils</h1>
+
+<p class="intro">
+Scia CSS includes a set of small utilities for everyday layout and styling tasks:
+colors, spacing, display/layout, sizing, radius/shadows, opacity, cursor, gap, positioning, and transitions.
+</p>
+<p class="intro">
+Utilities are meant to be **composable**: you can stack multiple classes on the same element
+to get predictable results without writing custom CSS.
+</p>
+
+<br/>
+---
+
+
+
+
+
+<h2 id="colors" class="scia-h2 docs-subtitle">Colors</h2>
+
+### Text color
+
+<div className="playground-box">
+```html
+<div className="scia-color-primary">Primary text</div>
+<div className="scia-color-secondary">Secondary text</div>
+<div className="scia-color-text">Default text</div>
+<div className="scia-color-muted">Muted text</div>
+<div className="scia-color-danger">Danger text</div>
+<div className="scia-color-success">Success text</div>
+<div className="scia-color-warning">Warning text</div>
+<div className="scia-color-info">Info text</div>
+```
+<div className='playground-box-content'>
+<div className='graphic-example-title'>Colors</div>
+<div className="scia-flex scia-flex-col scia-gap-8">
+    <div className="scia-color-primary">Primary text</div>
+    <div className="scia-color-secondary">Secondary text</div>
+    <div className="scia-color-text">Default text</div>
+    <div className="scia-color-muted">Muted text</div>
+    <div className="scia-color-danger">Danger text</div>
+    <div className="scia-color-success">Success text</div>
+    <div className="scia-color-warning">Warning text</div>
+    <div className="scia-color-info">Info text</div>
+</div>
+</div>
+</div>
+
+These classes map directly to Scia color role tokens.
+
+<br/>
+<br/>
+
+### Background color
+
+<div className="playground-box">
+```html
+<div className="scia-bg-on-surface scia-padding-12 scia-rounded-md">Surface</div> 
+<div className="scia-bg scia-padding-12 scia-rounded-md">Background</div> 
+<div className="scia-bg-on-danger scia-padding-12 scia-rounded-md">Danger soft</div> 
+<div className="scia-bg-on-success scia-padding-12 scia-rounded-md">Success soft</div> 
+<div className="scia-bg-on-warning scia-padding-12 scia-rounded-md">Warning soft</div> 
+<div className="scia-bg-on-info scia-padding-12 scia-rounded-md">Info soft</div> 
+```
+<div className='playground-box-content'>
+<div className='graphic-example-title'>Colors</div>
+<div className="scia-grid scia-grid-2 scia-gap-12"> 
+    <div className="scia-bg-on-surface scia-padding-12 scia-rounded-md">Surface</div> 
+    <div className="scia-bg scia-padding-12 scia-rounded-md">Background</div> 
+    <div className="scia-bg-on-danger scia-padding-12 scia-rounded-md">Danger soft</div> 
+    <div className="scia-bg-on-success scia-padding-12 scia-rounded-md">Success soft</div> 
+    <div className="scia-bg-on-warning scia-padding-12 scia-rounded-md">Warning soft</div> 
+    <div className="scia-bg-on-info scia-padding-12 scia-rounded-md">Info soft</div> 
+</div>
+</div>
+</div>
+
+<br/>
+---
+
+
+
+
+
+<h2 id="spacing" class="scia-h2 docs-subtitle">Spacing</h2>
+
+All spacing utilities are based on <code class="scia-code">`--scia-space-*`</code> tokens.
+
+<br/>
+
+
+### Margin
+
+Available directions:
+
+- <code class="scia-code">`scia-margin-*`</code> (all)
+- <code class="scia-code">`scia-margin-t-*`</code> (top)
+- <code class="scia-code">`scia-margin-b-*`</code> (bottom)
+- <code class="scia-code">`scia-margin-l-*`</code> (left)
+- <code class="scia-code">`scia-margin-r-*`</code> (right)
+- <code class="scia-code">`scia-margin-auto`</code> and directional <code class="scia-code">`*-auto`</code> helpers
+
+<br/>
+<br/>
+
+
+### Padding
+
+Available directions mirror margins:
+- <code class="scia-code">`scia-padding-*`</code> (all)
+- <code class="scia-code">`scia-padding-t-*`</code> (top)
+- <code class="scia-code">`scia-padding-b-*`</code> (bottom)
+- <code class="scia-code">`scia-padding-l-*`</code> (left)
+- <code class="scia-code">`scia-padding-r-*`</code> (right)
+
+<br/>
+---
+
+
+
+
+
+<h2 id="display-layout" class="scia-h2 docs-subtitle">Display & layout</h2>
+
+### Flex
+Supported flex utilities include:
+
+- <code class="scia-code">scia-flex</code>, <code class="scia-code">scia-inline-flex</code>
+- <code class="scia-code">scia-flex-col</code>, <code class="scia-code">scia-flex-row</code>
+- <code class="scia-code">scia-items-start|center|end</code>
+- <code class="scia-code">scia-justify-center,</code> <code class="scia-code">scia-justify-between</code>
+- <code class="scia-code">scia-flex-wrap</code>, <code class="scia-code">scia-flex-nowrap</code>
+
+<br/>
+<br/>
+
+### Grid
+
+<code class="scia-code">scia-grid-2</code> and <code class="scia-code">scia-grid-3</code> define equal columns with <code class="scia-code">minmax(0, 1fr)</code>.
+
+<div className="playground-box">
+```html
+<div className="scia-grid scia-grid-3 scia-gap-12"> 
+    <div className="scia-bg-on-surface scia-padding-12 scia-rounded-md">1</div> 
+    <div className="scia-bg-on-surface scia-padding-12 scia-rounded-md">2</div> 
+    <div className="scia-bg-on-surface scia-padding-12 scia-rounded-md">3</div> 
+</div>
+```
+<div className='playground-box-content'>
+<div className='graphic-example-title'>Grid example</div>
+<div className="scia-grid scia-grid-3 scia-gap-12"> 
+    <div className="scia-bg-on-surface scia-padding-12 scia-rounded-md">1</div> 
+    <div className="scia-bg-on-surface scia-padding-12 scia-rounded-md">2</div> 
+    <div className="scia-bg-on-surface scia-padding-12 scia-rounded-md">3</div> 
+</div>
+</div>
+</div>
+
+<br/>
+<br/>
+
+### Block / none
+
+```html
+<div class="scia-block">...</div>   <!-- display: block -->
+<div class="scia-none">...</div>    <!-- display: none -->
+```
+
+<br/>
+---
+
+
+
+
+
+<h2 id="sizing" class="scia-h2 docs-subtitle">Sizing</h2>
+
+|Class name|Effect|
+|:--|:--|
+|<code class="scia-code">.scia-full-w</code>|<code class="scia-code">width: 100%</code>|
+|<code class="scia-code">.scia-full-h</code>|<code class="scia-code">height: 100%</code>|
+|<code class="scia-code">.scia-auto-w</code>|<code class="scia-code">width: auto</code>|
+|<code class="scia-code">.scia-auto-h</code>|<code class="scia-code">height: auto</code>|
+|<code class="scia-code">.scia-full-minw</code>|<code class="scia-code">min-width: 100%</code>|
+|<code class="scia-code">.scia-full-minh</code>|<code class="scia-code">min-height: 100%</code>|
+|<code class="scia-code">.scia-auto-minw</code>|<code class="scia-code">min-width: auto</code>|
+|<code class="scia-code">.scia-auto-minh</code>|<code class="scia-code">min-height: auto</code>|
+|<code class="scia-code">.scia-full-maxw</code>|<code class="scia-code">max-width: 100%</code>|
+|<code class="scia-code">.scia-full-maxh</code>|<code class="scia-code">max-height: 100%</code>|
+|<code class="scia-code">.scia-auto-maxw</code>|<code class="scia-code">max-width: auto</code>|
+|<code class="scia-code">.scia-auto-maxh</code>|<code class="scia-code">max-height: auto</code>|
+|<code class="scia-code">.scia-full-view-w</code>|<code class="scia-code">width: 100dvh</code>|
+|<code class="scia-code">.scia-full-view-h</code>|<code class="scia-code">height: 100dvh</code>|
+
+
+<div class="scia-blockquote-info">
+<p class="blockquote-paragraph">Note: <code class="scia-code">scia-full-view-w</code> / <code class="scia-code">scia-full-view-h</code> use 100dvh for viewport sizing.</p>
+</div>
+
+<br/>
+---
+
+
+
+
+
+<h2 id="border-radius" class="scia-h2 docs-subtitle">Border radius</h2>
+Use these classes to apply token-based rounding:
+
+<div className="playground-box">
+```html
+<div className="scia-flex scia-gap-12 scia-flex-wrap scia-items-center"> 
+    <div className="scia-bg-on-surface scia-padding-32 scia-rounded-sm">sm</div> 
+    <div className="scia-bg-on-surface scia-padding-32 scia-rounded-md">md</div> 
+    <div className="scia-bg-on-surface scia-padding-32 scia-rounded-lg">lg</div> 
+    <div className="scia-bg-on-surface scia-padding-32 scia-rounded-full">full</div> 
+</div>
+```
+<div className='playground-box-content'>
+<div className='graphic-example-title'>Border radius example</div>
+<div className="scia-flex scia-gap-12 scia-flex-wrap scia-items-center"> 
+    <div className="scia-bg-on-surface scia-padding-32 scia-rounded-sm">sm</div> 
+    <div className="scia-bg-on-surface scia-padding-32 scia-rounded-md">md</div> 
+    <div className="scia-bg-on-surface scia-padding-32 scia-rounded-lg">lg</div> 
+    <div className="scia-bg-on-surface scia-padding-32 scia-rounded-full">full</div> 
+</div>
+</div>
+</div>
+
+<br/>
+---
+
+
+
+
+
+<h2 id="shadows" class="scia-h2 docs-subtitle">Shadows</h2>
+Shadows are mapped to tokens:
+
+|Class name|Shadow token|
+|:--|:--|
+|<code class="scia-code">.scia-shadow-sm</code>|<code class="scia-code">--scia-shadow-sm</code>|
+|<code class="scia-code">.scia-shadow-md</code>|<code class="scia-code">--scia-shadow-md</code>|
+|<code class="scia-code">.scia-shadow-lg</code>|<code class="scia-code">--scia-shadow-lg</code>|
+
+<br/>
+---
+
+
+
+
+
+<h2 id="opacity" class="scia-h2 docs-subtitle">Opacity</h2>
+
+|Class name|Effect|
+|:--|:--|
+|<code class="scia-code">.scia-opacity-10</code>|<code class="scia-code">opacity: .1</code>|
+|<code class="scia-code">.scia-opacity-20</code>|<code class="scia-code">opacity: .2</code>|
+|<code class="scia-code">.scia-opacity-30</code>|<code class="scia-code">opacity: .3</code>|
+|<code class="scia-code">.scia-opacity-40</code>|<code class="scia-code">opacity: .4</code>|
+|<code class="scia-code">.scia-opacity-50</code>|<code class="scia-code">opacity: .5</code>|
+|<code class="scia-code">.scia-opacity-60</code>|<code class="scia-code">opacity: .6</code>|
+|<code class="scia-code">.scia-opacity-70</code>|<code class="scia-code">opacity: .7</code>|
+|<code class="scia-code">.scia-opacity-80</code>|<code class="scia-code">opacity: .8</code>|
+|<code class="scia-code">.scia-opacity-90</code>|<code class="scia-code">opacity: .9</code>|
+
+<br/>
+---
+
+
+
+
+
+<h2 id="cursor" class="scia-h2 docs-subtitle">Cursor</h2>
+
+|Class name|Effect|
+|:--|:--|
+|<code class="scia-code">.scia-cursor-pointer</code>|<code class="scia-code">cursor: pointer</code>|
+|<code class="scia-code">.scia-cursor-default</code>|<code class="scia-code">cursor: default</code>|
+
+<br/>
+---
+
+
+
+
+
+<h2 id="gap" class="scia-h2 docs-subtitle">Gap</h2>
+Use gap utilities with flex/grid layouts:
+
+```html
+<div class="scia-flex scia-gap-12">...</div>
+<div class="scia-grid scia-gap-16">...</div>
+```
+
+<br/>
+---
+
+
+
+
+
+<h2 id="position" class="scia-h2 docs-subtitle">Position</h2>
+
+|Class name|Effect|
+|:--|:--|
+|<code class="scia-code">.scia-relative</code>|<code class="scia-code">position: relative</code>|
+|<code class="scia-code">.scia-absolute</code>|<code class="scia-code">position: absolute</code>|
+|<code class="scia-code">.scia-static</code>|<code class="scia-code">position: static</code>|
+|<code class="scia-code">.scia-sticky</code>|<code class="scia-code">position: sticky</code>|
+|<code class="scia-code">.scia-fixed</code>|<code class="scia-code">position: fixed</code>|
+
+<br/>
+---
+
+
+
+
+
+<h2 id="transitions" class="scia-h2 docs-subtitle">Transitions</h2>
+If you need to disable transitions (e.g. for reduced motion or specific components), use:
+
+```html
+<div class="scia-no-transitions">...</div>
+```
+
+<br/>

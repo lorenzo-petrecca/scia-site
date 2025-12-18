@@ -1,0 +1,356 @@
+<h1 id="intro" class="docs-title scia-typo-uppercase scia-typo-normal scia-typo-black">Buttons</h1>
+
+<p class="intro">
+Scia CSS buttons are built around a simple rule:
+
+- **<code class="scia-code">.scia-btn</code>** is the base reset and layout (works for <code class="scia-code">button</code>, <code class="scia-code">a</code>, <code class="scia-code">input[type="button"]</code>, etc.)
+- A **variant class** defines the visual style (primary, secondary, outline, danger…)
+- Optional **size/layout modifiers** adjust sizing or layout (small/medium/large, block, icon-only)
+</p>
+
+<div class="scia-blockquote-info">
+<span class="blockquote-paragraph">In Scia CSS, most button states are already handled for you: hover/active, disabled, and aria-disabled.</span>
+</div>
+
+<div class="scia-blockquote-warning">
+<p>**Note on colors**</p>
+<p class="blockquote-paragraph">The colors shown in these examples come from the theme used by this documentation site. Scia CSS does not enforce a fixed color palette: all colors are **token-based** and can be fully customized.</p>
+<p>See the [Themes documentation](/docs/themes) to learn how to override or define your own theme.</p>
+</div>
+
+<br/>
+---
+
+
+
+
+
+<h2 id="base-usage" class="scia-h2 docs-subtitle">Base usage</h2>
+
+The only required class is <code class="scia-code">.scia-btn</code>.
+
+<div className="playground-box">
+```html
+<button class="scia-btn">Default button</button>
+```
+<div className='playground-box-content'>
+<div className='graphic-example-title'>Base usage Example</div>
+<button class="scia-btn">Default button</button>
+</div>
+</div>
+
+
+<code className='scia-code'>.scia-btn</code> sets:
+
+- inline-flex layout (icon + label ready)
+- typography (font family/size/weight)
+- padding + radius + border
+- background + text colors (neutral surface/text)
+- shadow + smooth transitions
+- hover/active motion (translateY) and shadow changes
+
+<br/>
+---
+
+
+
+
+
+<h2 id="variants" class="scia-h2 docs-subtitle">Variants</h2>
+
+### Primary
+
+<div className="playground-box">
+```html
+<button class="scia-btn scia-btn-primary">Primary</button>
+```
+<div className='playground-box-content'>
+<div className='graphic-example-title'>Primary Button</div>
+<button class="scia-btn scia-btn-primary">Primary</button>
+</div>
+</div>
+
+<br/>
+
+### Secondary
+
+<div className="playground-box">
+```html
+<button class="scia-btn scia-btn-secondary">Secondary</button>
+```
+<div className='playground-box-content'>
+<div className='graphic-example-title'>Secondary Button</div>
+<button class="scia-btn scia-btn-secondary">Secondary</button>
+</div>
+</div>
+
+<br/>
+
+### Danger
+
+<div className="playground-box">
+```html
+<button class="scia-btn scia-btn-danger">Delete</button>
+```
+<div className='playground-box-content'>
+<div className='graphic-example-title'>Danger Button</div>
+<button class="scia-btn scia-btn-danger">Delete</button>
+</div>
+</div>
+
+Danger hover/active intentionally flips to a soft background and danger-colored text for clearer “destructive” feedback.
+
+<br/>
+---
+
+
+
+
+
+<h2 id="outline-variants" class="scia-h2 docs-subtitle">Outline variants</h2>
+
+Scia CSS includes two outline concepts:
+1. Neutral outline as a base (<code class="scia-code">scia-btn-outline-n</code>)
+2. Neutral outline that becomes primary or secondary on hover
+(<code class="scia-code">scia-btn-outline-n-primary</code>, <code class="scia-code">scia-btn-outline-n-secondary</code>)
+
+<br/>
+
+### Outline neutral
+
+<div className="playground-box">
+```html
+<button class="scia-btn scia-btn-outline-n">Outline neutral</button>
+```
+<div className='playground-box-content'>
+<div className='graphic-example-title'>Outline Button</div>
+<button class="scia-btn scia-btn-outline-n">Outline neutral</button>
+</div>
+</div>
+
+This is the “minimal button”:
+- transparent background
+- neutral border (--scia-color-border)
+- no shadow 
+
+<br/>
+
+### Neutral → Primary on hover
+
+<div className="playground-box">
+```html
+<button class="scia-btn scia-btn-outline-n scia-btn-outline-n-primary">
+  Outline n primary
+</button>
+```
+<div className='playground-box-content'>
+<div className='graphic-example-title'>Outline Neutral → Primary</div>
+<button class="scia-btn scia-btn-outline-n scia-btn-outline-n-primary">
+  Outline n primary
+</button>
+</div>
+</div>
+
+<br/>
+
+### Neutral → Secondary on hover
+
+<div className="playground-box">
+```html
+<button class="scia-btn scia-btn-outline-n scia-btn-outline-n-secondary">
+  Outline n secondary
+</button>
+```
+<div className='playground-box-content'>
+<div className='graphic-example-title'>Outline Neutral → Secondary</div>
+<button class="scia-btn scia-btn-outline-n scia-btn-outline-n-secondary">
+  Outline n secondary
+</button>
+</div>
+</div>
+
+<br/>
+
+
+### Outline primary
+
+<div className="playground-box">
+```html
+<button class="scia-btn scia-btn-outline-primary">Outline primary</button>
+```
+<div className='playground-box-content'>
+<div className='graphic-example-title'>Outline primary button</div>
+<button class="scia-btn scia-btn-outline-primary">Outline primary</button>
+</div>
+</div>
+
+<br/>
+
+### Outline secondary
+
+<div className="playground-box">
+```html
+<button class="scia-btn scia-btn-outline-secondary">Outline secondary</button>
+```
+<div className='playground-box-content'>
+<div className='graphic-example-title'>Outline secondary button</div>
+<button class="scia-btn scia-btn-outline-secondary">Outline secondary</button>
+</div>
+</div>
+
+<br/>
+---
+
+
+
+
+
+<h2 id="disabled" class="scia-h2 docs-subtitle">Disabled & aria-disabled</h2>
+
+Buttons support both:
+- native <code class="scia-code">disabled</code> (for <code class="scia-code">`<button>`</code>, <code class="scia-code">`<input>`</code>)
+- <code class="scia-code">aria-disabled="true"</code> (useful for <code class="scia-code">`<a>`</code> or non-button elements)
+
+In both cases Scia CSS:
+
+- reduces opacity
+- disables hover/active motion and shadow
+- sets <code class="scia-code">cursor: not-allowed</code>
+
+<div className="playground-box">
+```html
+<button class="scia-btn scia-btn-primary" disabled>Disabled</button>
+
+<a class="scia-btn scia-btn-primary" aria-disabled="true">
+  Aria disabled link-button
+</a>
+```
+<div className='playground-box-content'>
+<div className='graphic-example-title'>Disabled Buttons</div>
+<div style={{display: 'flex', gap: '2rem', alignItems: 'center', justifyContent: 'flex-start', flexWrap: 'wrap'}}>
+<button class="scia-btn scia-btn-primary" disabled>Disabled</button>
+<a class="scia-btn scia-btn-primary" aria-disabled="true">
+  Aria disabled link-button
+</a>
+</div>
+</div>
+</div>
+
+<div class="scia-blockquote-warning">
+<span class="blockquote-paragraph"><code class="scia-code">aria-disabled</code> is only a semantic flag. If you use it on <code class="scia-code">`<a>`</code>, you should also prevent navigation in your app logic (or remove the <code class="scia-code">href</code>) because CSS alone cannot block navigation.</span>
+</div>
+
+<br/>
+---
+
+
+
+
+
+<h2 id="size-layout-modifiers" class="scia-h2 docs-subtitle">Size & layout modifiers</h2>
+
+### Sizes
+
+<code class="scia-code">small/medium/large</code> override the default <code class="scia-code">.scia-btn</code> size, padding and font-size.
+<div className="playground-box">
+```html
+<button class="scia-btn scia-btn-primary scia-btn-small">Small</button>
+<button class="scia-btn scia-btn-primary">Default</button>
+<button class="scia-btn scia-btn-primary scia-btn-medium">Medium</button>
+<button class="scia-btn scia-btn-primary scia-btn-large">Large</button>
+```
+<div className='playground-box-content'>
+<div className='graphic-example-title'>Button sizes</div>
+<div style={{display: 'flex', gap: '2rem', alignItems: 'center', justifyContent: 'flex-start', flexWrap: 'wrap'}}>
+<button class="scia-btn scia-btn-primary scia-btn-small">Small</button>
+<button class="scia-btn scia-btn-primary">Default</button>
+<button class="scia-btn scia-btn-primary scia-btn-medium">Medium</button>
+<button class="scia-btn scia-btn-primary scia-btn-large">Large</button>
+</div>
+</div>
+</div>
+
+<br/>
+
+### Full-width
+
+<div className="playground-box">
+```html
+<button className="scia-btn scia-btn-primary scia-btn-block"> Block button (100%) </button>
+```
+<div className='playground-box-content'>
+<div className='graphic-example-title'>Button sizes</div>
+<div style={{display: 'flex', gap: '2rem', alignItems: 'center', justifyContent: 'flex-start'}}>
+<button className="scia-btn scia-btn-primary scia-btn-block"> Block button (100%) </button>
+</div>
+</div>
+</div>
+
+<br/>
+
+### Icon-only button
+
+<code class="scia-code">scia-btn-icon</code> creates a circular button with fixed dimensions (32px) and centered content.
+
+<div className="playground-box">
+```html
+<button className="scia-btn scia-btn-outline-primary scia-btn-icon" aria-label="Settings"> ⚙️ </button>
+<button className="scia-btn scia-btn-primary scia-btn-icon" aria-label="Add"> + </button>
+```
+<div className='playground-box-content'>
+<div className='graphic-example-title'>Button sizes</div>
+<div style={{display: 'flex', gap: '2rem', alignItems: 'center', justifyContent: 'flex-start', flexWrap: 'wrap'}}>
+<button className="scia-btn scia-btn-outline-primary scia-btn-icon" aria-label="Settings"> ⚙️ </button>
+<button className="scia-btn scia-btn-primary scia-btn-icon" aria-label="Add"> + </button>
+</div>
+</div>
+</div>
+
+<div class="scia-blockquote-info">
+<span class="blockquote-paragraph">Icon-only buttons should always provide an accessible label (<code class="scia-code">aria-label</code>) since there is no visible text.</span>
+</div>
+
+<br/>
+---
+
+
+
+
+
+<h2 id="links" class="scia-h2 docs-subtitle">Links</h2>
+
+Scia CSS also provides link styles independent from buttons:
+- <code class="scia-code">.scia-link</code> is the base link style
+- <code class="scia-code">.scia-link-primary</code> and <code class="scia-code">.scia-link-secondary</code> modify hover/active colors
+- disabled and aria-disabled are supported similarly to buttons
+
+
+<div className="playground-box">
+```html
+<a className="scia-link" href="#buttons">Default link</a>
+<a class="scia-link scia-link-primary" href="#buttons">Primary link</a>
+<a class="scia-link scia-link-secondary" href="#buttons">Secondary link</a>
+<a class="scia-link scia-link-primary" aria-disabled="true">Disabled link</a>
+```
+<div className='playground-box-content'>
+<div className='graphic-example-title'>Button sizes</div>
+<div style={{display: 'flex', gap: '2rem', alignItems: 'center', justifyContent: 'flex-start', flexWrap: 'wrap'}}>
+<a className="scia-link" href="#buttons">Default link</a>
+<a class="scia-link scia-link-primary" href="#buttons">Primary link</a>
+<a class="scia-link scia-link-secondary" href="#buttons">Secondary link</a>
+<a class="scia-link scia-link-primary" aria-disabled="true">Disabled link</a>
+</div>
+</div>
+</div>
+
+<br/>
+---
+
+
+
+
+
+<h2 id="learn-more" class="scia-h2 docs-subtitle">More on tokens</h2>
+
+Button colors, radius, spacing, shadows, transitions and easing are all driven by Scia tokens.
+For details and for customization, see the [Tokens documentation](/docs/tokens).

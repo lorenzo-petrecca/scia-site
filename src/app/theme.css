@@ -1,0 +1,150 @@
+/*  ============================================
+        SCIA CSS — THEME OVERRIDE (Primary: GREEN)
+        Import this AFTER scia-themes.css
+    ============================================ */
+
+/* Default: light theme override */
+:root {
+  /* Neutral (light) */
+  --scia-color-bg: #f9fafb;
+  --scia-color-surface: #ffffff;
+  --scia-color-border: #e5e7eb;
+  --scia-color-text: #020617;
+  --scia-color-text-muted: #6b7280;
+
+  /* Primary (light) — GREEN */
+  --scia-color-primary: #10b981;        /* emerald */
+  --scia-color-primary-soft: #d1fae5;   /* emerald-100 */
+  --scia-color-primary-strong: #047857; /* emerald-700 */
+  --scia-color-on-primary: #f9fafb;
+
+  /* Secondary (light) — teal (complementary to green) */
+  --scia-color-secondary: #14b8a6;        /* teal */
+  --scia-color-secondary-soft: #ccfbf1;   /* teal-100 */
+  --scia-color-secondary-strong: #0f766e; /* teal-700 */
+  --scia-color-on-secondary: #f9fafb;
+
+  /* Status (light) — tuned to not collide with primary */
+  --scia-color-success: #16a34a;
+  --scia-color-success-soft: #d8ffe6;
+
+  --scia-color-danger: #dc2626;
+  --scia-color-danger-soft: #ffd1d1;
+
+  --scia-color-warning: #f59e0b;
+  --scia-color-warning-soft: #fff3ea;
+
+  /* Info (light) — cyan (distinct from primary) */
+  --scia-color-info: #06b6d4;
+  --scia-color-info-soft: #cffafe;
+}
+
+/* Light mode MANUALE override */
+:root[data-scia-theme="light"] {
+  /* Neutral (light) */
+  --scia-color-bg: #f9fafb;
+  --scia-color-surface: #ffffff;
+  --scia-color-border: #e5e7eb;
+  --scia-color-text: #020617;
+  --scia-color-text-muted: #6b7280;
+
+  /* Primary (light) — GREEN */
+  --scia-color-primary: #10b981;
+  --scia-color-primary-soft: #d1fae5;
+  --scia-color-primary-strong: #047857;
+  --scia-color-on-primary: #f9fafb;
+
+  /* Secondary (light) — teal */
+  --scia-color-secondary: #14b8a6;
+  --scia-color-secondary-soft: #ccfbf1;
+  --scia-color-secondary-strong: #0f766e;
+  --scia-color-on-secondary: #f9fafb;
+
+  /* Status (light) */
+  --scia-color-success: #16a34a;
+  --scia-color-success-soft: #d8ffe6;
+
+  --scia-color-danger: #dc2626;
+  --scia-color-danger-soft: #ffd1d1;
+
+  --scia-color-warning: #f59e0b;
+  --scia-color-warning-soft: #fff3ea;
+
+  /* Info (light) */
+  --scia-color-info: #06b6d4;
+  --scia-color-info-soft: #cffafe;
+}
+
+/* Dark mode MANUALE override */
+:root[data-scia-theme="dark"] {
+  /* Neutral (dark) */  
+  --scia-color-bg: #12181f;
+  --scia-color-surface: #192028;
+  --scia-color-border: #1f2937;
+  --scia-color-text: #e5e7eb;
+  --scia-color-text-muted: #9ca3af;
+
+  /* Primary (dark) — GREEN (brighter for contrast) */
+  --scia-color-primary: #34d399;        /* emerald-400 */
+  --scia-color-primary-soft: #064e3b;   /* deep emerald surface */
+  --scia-color-primary-strong: #10b981; /* emerald */
+  --scia-color-on-primary: #ffffff;
+
+  /* Secondary (dark) — teal */
+  --scia-color-secondary: #2dd4bf;        /* teal-400 */
+  --scia-color-secondary-soft: #0f2f2b;   /* deep teal surface */
+  --scia-color-secondary-strong: #14b8a6; /* teal */
+  --scia-color-on-secondary: #ffffff;
+
+  /* Status (dark) */
+  --scia-color-success: #22c55e;
+  --scia-color-success-soft: #29382f;
+
+  --scia-color-danger: #f97373;
+  --scia-color-danger-soft: #3b1f1f;
+
+  --scia-color-warning: #fbbf24;
+  --scia-color-warning-soft: #362D29;
+
+  /* Info (dark) — cyan */
+  --scia-color-info: #22d3ee;
+  --scia-color-info-soft: #0b2c33;
+}
+
+/* AUTO-DARK override: system dark, and NO data-scia-theme set */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-scia-theme]) {
+    /* Neutral (dark) */
+    --scia-color-bg: #12181f;
+    --scia-color-surface: #192028;
+    --scia-color-border: #1f2937;
+    --scia-color-text: #e5e7eb;
+    --scia-color-text-muted: #9ca3af;
+
+    /* Primary (dark) — GREEN */
+    --scia-color-primary: #34d399;
+    --scia-color-primary-soft: #064e3b;
+    --scia-color-primary-strong: #10b981;
+    --scia-color-on-primary: #ffffff;
+
+    /* Secondary (dark) — teal */
+    --scia-color-secondary: #2dd4bf;
+    --scia-color-secondary-soft: #0f2f2b;
+    --scia-color-secondary-strong: #14b8a6;
+    --scia-color-on-secondary: #ffffff;
+
+    /* Status (dark) */
+    --scia-color-success: #22c55e;
+    --scia-color-success-soft: #29382f;
+
+    --scia-color-danger: #f97373;
+    --scia-color-danger-soft: #3b1f1f;
+
+    --scia-color-warning: #fbbf24;
+    --scia-color-warning-soft: #362D29;
+
+    /* Info (dark) */
+    --scia-color-info: #22d3ee;
+    --scia-color-info-soft: #0b2c33;
+  }
+}

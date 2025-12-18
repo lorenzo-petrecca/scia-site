@@ -1,0 +1,258 @@
+<h1 id="intro" class="docs-title scia-typo-uppercase scia-typo-normal scia-typo-black">Typography</h1>
+
+<p class="intro">
+Scia CSS provides a small set of typography helpers to keep text consistent across your UI.
+The goal is to cover the common cases (headings, paragraphs, muted text, inline code) without a heavy “design system” layer.
+</p>
+
+<br/>
+---
+
+
+
+
+
+<h2 id="headings" class="scia-h2 docs-subtitle">Heading presets</h2>
+
+Scia CSS provides ready-made heading presets that combine font size, weight, line-height, color, and spacing.
+
+```html
+<h1 class="scia-h1">Heading 1</h1>
+<h2 class="scia-h2">Heading 2</h2>
+<h3 class="scia-h3">Heading 3</h3>
+<h4 class="scia-h4">Heading 4</h4>
+<h5 class="scia-h5">Heading 5</h5>
+```
+
+<div class="graphic-example">
+<div className='graphic-example-title'>Heading Examples</div>
+<h1 className="scia-h1">Heading 1 (scia-h1)</h1>
+<h2 className="scia-h2">Heading 2 (scia-h2)</h2>
+<h3 className="scia-h3">Heading 3 (scia-h3)</h3>
+<h4 className="scia-h4">Heading 4 (scia-h4)</h4>
+<h5 className="scia-h5">Heading 5 (scia-h5)</h5>
+</div>
+
+<div class="scia-blockquote-info">
+<span class="blockquote-paragraph">You can still use semantic HTML (<code class="scia-code">`<h1>..</h1>`</code>) while applying Scia classes for consistent styling.</span>
+</div>
+
+<br/>
+---
+
+
+
+
+
+<h2 id="paragraphs" class="scia-h2 docs-subtitle">Paragraphs & Text styles</h2>
+
+### Paragraphs
+
+The default paragraph style is designed for readability in long-form content.
+
+```html
+<p class="scia-paragraph">Paragraph text</p>
+```
+
+<div class="graphic-example">
+<div className='graphic-example-title'>Paragraph Example</div>
+<p className="scia-paragraph"> This is a standard paragraph using the scia-paragraph preset. It uses the base text size, regular font weight, and the main text color. </p>
+</div>
+
+<br/>
+
+### Lead text
+
+Use lead text for introductions or highlighted paragraphs.
+
+```html
+<p class="scia-leadText">Lead text</p>
+```
+
+<div class="graphic-example">
+<div className='graphic-example-title'>Lead text Example</div>
+<p className="scia-leadText"> This is a lead paragraph, meant to introduce a section or page. </p>
+</div>
+
+<br/>
+
+### Labels
+
+Labels are small, uppercase-friendly text blocks used for captions or metadata.
+
+```html
+<span class="scia-label">Label</span>
+```
+
+<div class="graphic-example">
+<div className='graphic-example-title'>Label Example</div>
+<span className="scia-label">Label text</span>
+</div>
+
+<br/>
+---
+
+
+
+
+
+<h2 id="text-alignment" class="scia-h2 docs-subtitle">Text Alignment</h2>
+
+Use alignment utilities to control text flow without redefining styles.
+
+```html
+<div class="scia-text-left">Left aligned</div>
+<div class="scia-text-center">Centered</div>
+<div class="scia-text-right">Right</div>
+<div class="scia-text-justify">Justified</div>
+````
+
+<div class="graphic-example">
+<div className='graphic-example-title'>Text Alignment Example</div>
+<div style={{ display: "flex", flexDirection: "column", gap: "0.6rem" }}>
+    <div className="scia-text-left">Left aligned text</div>
+    <div className="scia-text-center">Centered text</div>
+    <div className="scia-text-right">Right aligned text</div>
+    <div className="scia-text-justify">Justified text</div>
+</div>
+</div>
+
+<br/>
+---
+
+
+
+
+
+<h2 id="text-transform" class="scia-h2 docs-subtitle">Text transform & white-space</h2>
+
+These utilities modify text casing and wrapping behavior.
+
+```html
+<div class="scia-typo-uppercase">uppercase</div>
+<div class="scia-typo-lowercase">LOWERCASE</div>
+<div class="scia-typo-capitalize">capitalize words</div>
+<div class="scia-typo-nowrap">no wrap</div>
+```
+
+<div class="graphic-example">
+<div className='graphic-example-title'>Text transform Example</div>
+<div style={{ display: "flex", flexDirection: "column", gap: "0.6rem" }}> 
+    <div className="scia-typo-uppercase">uppercase text</div> 
+    <div className="scia-typo-lowercase">LOWERCASE TEXT</div> 
+    <div className="scia-typo-capitalize">capitalize words</div> 
+    <div className="scia-typo-nowrap">This text will not wrap</div> 
+</div>
+</div>
+
+<br/>
+---
+
+
+
+
+
+<h2 id="font-size" class="scia-h2 docs-subtitle">Font size</h2>
+
+Font sizes are mapped to Scia text tokens (<code class="scia-code">--scia-text-*</code>).
+
+| Class               | Size Token              |
+| :-- | :-- |
+| <code class="scia-code">scia-typo-xxsmall</code> | <code class="scia-code">--scia-text-2xs</code>  |
+| <code class="scia-code">scia-typo-xsmall</code>  | <code class="scia-code">--scia-text-xs</code>   |
+| <code class="scia-code">scia-typo-small</code>   | <code class="scia-code">--scia-text-sm</code>   |
+| <code class="scia-code">scia-typo-normal</code>  | <code class="scia-code">--scia-text-base</code> |
+| <code class="scia-code">scia-typo-large</code>   | <code class="scia-code">--scia-text-lg</code>   |
+| <code class="scia-code">scia-typo-xlarge</code>  | <code class="scia-code">--scia-text-xl</code>   |
+| <code class="scia-code">scia-typo-xxlarge</code> | <code class="scia-code">--scia-text-2xl</code>  |
+| <code class="scia-code">scia-typo-big</code>     | <code class="scia-code">--scia-text-3xl</code>  |
+| <code class="scia-code">scia-typo-bigger</code>  | <code class="scia-code">--scia-text-4xl</code>  |
+
+
+```html
+<span class="scia-typo-small">Small text</span>
+<span class="scia-typo-large">Large text</span>
+<span class="scia-typo-bigger">Very large text</span>
+```
+
+<div class="graphic-example">
+<div className='graphic-example-title'>Font size Example</div>
+<div class="scia-typo-small">Small text</div>
+<div class="scia-typo-large">Large text</div>
+<div class="scia-typo-bigger">Very large text</div>
+</div>
+
+<br/>
+---
+
+
+
+
+
+<h2 id="font-weight" class="scia-h2 docs-subtitle">Font weight</h2>
+
+Font weight helpers are mapped to Scia weight tokens (<code class="scia-code">--scia-fw-*</code>).
+
+
+| Class                | Weight token  |
+| :-- | :-- |
+| <code class="scia-code">scia-typo-thin</code>     | <code class="scia-code">--scia-fw-1</code> |
+| <code class="scia-code">scia-typo-xlight</code>   | <code class="scia-code">--scia-fw-2</code> |
+| <code class="scia-code">scia-typo-light</code>    | <code class="scia-code">--scia-fw-3</code> |
+| <code class="scia-code">scia-typo-regular</code>  | <code class="scia-code">--scia-fw-4</code> |
+| <code class="scia-code">scia-typo-medium</code>   | <code class="scia-code">--scia-fw-5</code> |
+| <code class="scia-code">scia-typo-semibold</code> | <code class="scia-code">--scia-fw-6</code> |
+| <code class="scia-code">scia-typo-bold</code>     | <code class="scia-code">--scia-fw-7</code> |
+| <code class="scia-code">scia-typo-xbold</code>    | <code class="scia-code">--scia-fw-8</code> |
+| <code class="scia-code">scia-typo-black</code>    | <code class="scia-code">--scia-fw-9</code> |
+
+```html
+<span class="scia-typo-light">Light</span>
+<span class="scia-typo-regular">Regular</span>
+<span class="scia-typo-bold">Bold</span>
+<span class="scia-typo-black">Black</span>
+```
+
+<div class="graphic-example">
+<div className='graphic-example-title'>Font weight Example</div>
+<div class="scia-typo-light">Light</div>
+<div class="scia-typo-regular">Regular</div>
+<div class="scia-typo-bold">Bold</div>
+<div class="scia-typo-black">Black</div>
+</div>
+
+<br/>
+---
+
+
+
+
+
+<h2 id="font-style" class="scia-h2 docs-subtitle">Font style</h2>
+
+```html
+<span class="scia-typo-italic">Italic text</span>
+```
+
+<div class="graphic-example">
+<div className='graphic-example-title'>Font weight Example</div>
+<div class="scia-typo-italic">Italic text</div>
+</div>
+
+<br/>
+---
+
+
+
+
+
+<h2 id="learn-more" class="scia-h2 docs-subtitle">Learn more</h2>
+
+<div class="scia-blockquote-info">
+<div class="blockquote-paragraph">For detailed information about typography tokens — including **font families**, **font sizes**, **line heights**, and **font weights** — refer to the **Tokens** documentation.</div>
+<div class="blockquote-paragraph">Typography utilities and presets in Scia CSS are built on top of those tokens, so understanding them helps when customizing or extending the system.</div>
+</div>
+
+See the [Tokens → Typography](/docs/tokens) page for the full reference.
+
+<br/>

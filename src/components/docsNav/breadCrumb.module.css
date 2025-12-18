@@ -1,0 +1,38 @@
+.breadCrumb {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    padding: 1.4rem 2rem;
+    position: sticky;
+    top: 130px;
+    width: 100%;
+    background-color: var(--scia-color-bg);
+    margin-bottom: 2rem;
+    border-radius: .8rem;
+    border: 1px solid var(--scia-color-border);
+    box-shadow: 
+        0 1px 6px var(--scia-color-border),
+        var(--scia-shadow-sm),
+        var(--scia-shadow-lg);
+}
+
+.breadCrumbLink {
+    border-radius: 0 !important;
+    padding: 1rem 2rem;
+    clip-path: url("#btn-hex");
+    text-decoration: none;
+    max-width: 100px;
+}
+
+.breadCrumbLink > span {
+    display: block;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.breadCrumbLink:hover {
+    text-decoration: none;
+}
+

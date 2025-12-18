@@ -1,0 +1,37 @@
+.docsNavContainer {
+    width: 100%;
+    height: 100%;
+}
+
+.docsNav {
+    width: 100%;
+    height: 100%;
+    padding: .4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+    font-size: var(--scia-text-base);
+}
+
+.docsSectionsNav {
+    border-left: 2px solid var(--scia-color-border);
+    padding-left: 1.2rem;
+    margin-left: 1.2rem;
+}
+
+.sectionsNavLink {
+    color:var(--scia-color-text);
+    font-weight: var(--scia-fw-2);
+    font-size: inherit;
+    text-decoration: none !important;
+    padding: .2rem 0;
+    background-color: transparent;
+    transition: all var(--scia-transition-medium) var(--scia-ease-default);
+}
+
+.sectionsNavLink:hover {
+    transform: translateY(-.1rem);
+    color: var(--scia-color-secondary);
+}

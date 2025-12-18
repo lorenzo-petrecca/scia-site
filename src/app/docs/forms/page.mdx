@@ -1,0 +1,276 @@
+<h1 id="intro" class="docs-title scia-typo-uppercase scia-typo-normal scia-typo-black">Forms</h1>
+
+<p class="intro">
+Scia CSS provides a small set of form primitives to style common controls consistently:
+inputs, textareas, selects, inline code, code blocks, and a simple switch toggle.
+</p>
+
+<br/>
+---
+
+
+
+
+
+<h2 id="field-wrapper" class="scia-h2 docs-subtitle">Field wrapper</h2>
+
+Use <code class="scia-code">.scia-field</code> to group label, input, and helper text with consistent spacing.
+
+<div className="playground-box">
+```html
+<div class="scia-field">
+  <label class="scia-field-label" for="email">Email</label>
+  <input class="scia-input" id="email" type="email" placeholder="name@example.com" />
+  <div class="scia-field-help">We’ll never share your email.</div>
+</div>
+```
+<div className='playground-box-content'>
+<div className='graphic-example-title'>Field wrapper example</div>
+<div className="scia-field">
+  <label className="scia-field-label" htmlFor="demo-email">Email</label>
+  <input
+    id="demo-email"
+    className="scia-input"
+    type="email"
+    placeholder="name@example.com"
+  />
+  <div className="scia-field-help">We’ll never share your email.</div>
+</div>
+</div>
+</div>
+
+<div class="scia-blockquote-info">
+<p class="blockquote-paragraph"><code class="scia-code">.scia-field</code> is a flex column wrapper with a small gap and bottom spacing, so forms remain readable without custom CSS.</p>
+</div>
+
+<br/>
+---
+
+
+
+
+
+<h2 id="input" class="scia-h2 docs-subtitle">Input</h2>
+
+<code class="scia-code">.scia-input</code> is the base style for common inputs (text, email, password, etc.).
+
+
+<div className="playground-box">
+```html
+<input class="scia-input" type="text" placeholder="Type something..." />
+```
+<div className='playground-box-content'>
+<div className='graphic-example-title'>Input text example</div>
+<input id='demo-text' class="scia-input" type="text" placeholder="Type something..." />
+</div>
+</div>
+
+<br/>
+---
+
+
+
+
+
+<h2 id="disabled" class="scia-h2 docs-subtitle">Disabled</h2>
+
+<div className="playground-box">
+```html
+<input class="scia-input" type="text" placeholder="Disabled" disabled />
+```
+<div className='playground-box-content'>
+<div className='graphic-example-title'>Disabled input example</div>
+<input id='demo-disabled' class="scia-input" type="text" placeholder="Disabled" disabled />
+</div>
+</div>
+
+<br/>
+---
+
+
+
+
+
+<h2 id="input-states" class="scia-h2 docs-subtitle">Input states</h2>
+
+Scia CSS includes two state variants for validation feedback:
+- <code class="scia-code">.scia-input--success</code>
+- <code class="scia-code">.scia-input--danger</code>
+
+<div className="playground-box">
+```html
+<input class="scia-input scia-input--success" type="text" />
+<input class="scia-input scia-input--danger" type="text" />
+```
+<div className='playground-box-content'>
+<div className='graphic-example-title'>Input states example</div>
+<div style={{display: 'flex', flexDirection: 'column', gap: '1.2rem'}}>
+<input id="demo-success" class="scia-input scia-input--success" type="text" defaultValue="Looks good" />
+<input id="demo-danger" class="scia-input scia-input--danger" type="text" defaultValue="Wrong value" />
+</div>
+</div>
+</div>
+
+<div class="scia-blockquote-info">
+<p class="blockquote-paragraph">These variants adjust border + ring colors using the corresponding status tokens.</p>
+</div>
+
+<br/>
+---
+
+
+
+
+
+<h2 id="textarea" class="scia-h2 docs-subtitle">Textarea</h2>
+
+<code class="scia-code">.scia-textarea</code> is a small modifier for <code class="scia-code">.scia-input</code>:
+- adds a minimum height
+- allows vertical resizing
+
+<div className="playground-box">
+```html
+<textarea class="scia-input scia-textarea" placeholder="Write a message..."></textarea>
+```
+<div className='playground-box-content'>
+<div className='graphic-example-title'>Textarea example</div>
+<textarea id='demo-textarea' class="scia-input scia-textarea" placeholder="Write a message..."></textarea>
+</div>
+</div>
+
+<br/>
+---
+
+
+
+
+
+<h2 id="select" class="scia-h2 docs-subtitle">Select</h2>
+
+<code class="scia-code">.scia-select</code> styles native <code class="scia-code">`<select>`</code> elements and uses a custom arrow.
+
+<div className="playground-box">
+```html
+<select class="scia-select">
+  <option value="">Choose an option…</option>
+  <option>Option A</option>
+  <option>Option B</option>
+</select>
+```
+<div className='playground-box-content'>
+<div className='graphic-example-title'>Select example</div>
+<select id='demo-select' class="scia-select">
+  <option value="">Choose an option…</option>
+  <option>Option A</option>
+  <option>Option B</option>
+</select>
+</div>
+</div>
+
+<br/>
+---
+
+
+
+
+
+<h2 id="inline-code" class="scia-h2 docs-subtitle">Inline code</h2>
+
+<code class="scia-code">.scia-code</code> styles inline code-like fragments (tokens, class names, commands).
+
+<div className="playground-box">
+```html
+<p className="scia-paragraph"> Use <code className="scia-code">--scia-color-primary</code> to reference the primary color role. </p>
+```
+<div className='playground-box-content'>
+<div className='graphic-example-title'>Inline code example</div>
+<p className="scia-paragraph"> Use <code className="scia-code">--scia-color-primary</code> to reference the primary color role. </p>
+</div>
+</div>
+
+<br/>
+---
+
+
+
+
+
+<h2 id="code-block" class="scia-h2 docs-subtitle">Code block</h2>
+
+<code class="scia-code">.scia-code-block</code> is a basic container for preformatted content:
+padding, border, surface background, and horizontal overflow handling.
+
+<div className="playground-box">
+```html
+<pre className="scia-code-block"><code>{`<button class="scia-btn scia-btn-primary">Primary</button>`}</code></pre>
+```
+<div className='playground-box-content'>
+<div className='graphic-example-title'>Code block example</div>
+<pre className="scia-code-block"><code>{`<button class="scia-btn scia-btn-primary">Primary</button>`}</code></pre>
+</div>
+</div>
+
+<br/>
+---
+
+
+
+
+
+<h2 id="switch" class="scia-h2 docs-subtitle">Switch (toggle)</h2>
+
+The switch is made of:
+- a hidden checkbox (<code class="scia-code">.scia-switch-input</code>)
+- a visual track (<code class="scia-code">.scia-switch-track</code>)
+- a thumb (<code class="scia-code">.scia-switch-thumb</code>)
+- optional label text (<code class="scia-code">.scia-switch-label</code>)
+
+<div className="playground-box">
+```html
+<!-- Notification Switch -->
+<label className="scia-switch"> 
+    <span className="scia-switch-label">Notifications</span> 
+    <input className="scia-switch-input" type="checkbox" defaultChecked /> 
+    <span className="scia-switch-track"> 
+        <span className="scia-switch-thumb" /> 
+    </span> 
+</label> 
+
+<!-- Disabled Switch -->
+<label className="scia-switch"> 
+    <span className="scia-switch-label">Disabled</span> 
+    <input className="scia-switch-input" type="checkbox" disabled /> 
+    <span className="scia-switch-track"> 
+        <span className="scia-switch-thumb" /> 
+    </span> 
+</label>
+```
+<div className='playground-box-content'>
+<div className='graphic-example-title'>Switch example</div>
+<div style={{ display: "flex", flexDirection: "column", gap: "1.2rem" }}>
+    <label className="scia-switch"> 
+        <span className="scia-switch-label">Notifications</span> 
+        <input className="scia-switch-input" type="checkbox" defaultChecked /> 
+        <span className="scia-switch-track"> 
+            <span className="scia-switch-thumb" /> 
+        </span> 
+    </label> 
+    <label className="scia-switch"> 
+        <span className="scia-switch-label">Disabled</span> 
+        <input className="scia-switch-input" type="checkbox" disabled /> 
+        <span className="scia-switch-track"> 
+            <span className="scia-switch-thumb" /> 
+        </span> 
+    </label> 
+</div>
+</div>
+</div>
+
+<div class="scia-blockquote-info">
+<p class="blockquote-paragraph">
+- The checkbox is visually hidden but remains accessible.
+- The track is the clickable surface and the thumb animates with <code class="scia-code">transform</code>.
+</p>
+</div>
+
+<br/>

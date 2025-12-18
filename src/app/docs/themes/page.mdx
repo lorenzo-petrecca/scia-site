@@ -1,0 +1,165 @@
+<h1 id="intro" class="docs-title scia-typo-uppercase scia-typo-normal scia-typo-black">Themes</h1>
+
+<p class="intro">
+Scia CSS uses a **token-based theme system** built around color roles instead of raw colors.
+The same roles are reused across components, utilities, and custom UI, allowing consistent
+light, dark, and system-driven themes.
+</p>
+
+<br/>
+---
+
+
+<h2 id="theme-modes" class="scia-h2 docs-subtitle">Theme modes</h2>
+
+Scia CSS supports three theme modes:
+
+- **Auto (default)**: follows the system preference
+- **Light**
+- **Dark**
+
+### Force a theme
+
+Set the `data-scia-theme` attribute on the root element:
+
+```html
+<html data-scia-theme="light">...</html>
+<html data-scia-theme="dark">...</html>
+```
+
+<div class="scia-blockquote-warning">
+<span class="blockquote-paragraph">If you omit it, Scia CSS can follow the system theme (depending on your implementation).</span>
+</div>
+
+<br/>
+---
+
+<h2 id="color-roles" class="scia-h2 docs-subtitle">Color roles</h2>
+
+Instead of naming colors like “blue-500”, Scia CSS uses **roles**.
+Roles describe purpose, not hue. Below all the scia themes roles.
+
+<br/>
+
+### Core roles
+| Role                     | Description                              |
+| :-- | :-- |
+| <code class="scia-code">--scia-color-bg</code>        | Page background color                    |
+| <code class="scia-code">--scia-color-surface</code>   | Background for cards, panels, and blocks |
+| <code class="scia-code">--scia-color-text</code>      | Primary text color                       |
+| <code class="scia-code">--scia-color-text-muted</code> | Secondary / muted text                   |
+| <code class="scia-code">--scia-color-border</code>    | Default border color                     |
+
+
+<br/>
+
+### Brand roles
+| Role                            | Description                              |
+| :-- | :-- |
+| <code class="scia-code">--scia-color-primary</code>          | Primary brand/action color               |
+| <code class="scia-code">--scia-color-primary-soft</code>     | Subtle background for primary accents    |
+| <code class="scia-code">--scia-color-primary-strong</code>   | Emphasis / hover / active variant        |
+| <code class="scia-code">--scia-color-on-primary</code>       | Text/icon color on primary backgrounds   |
+| <code class="scia-code">--scia-color-secondary</code>        | Secondary accent color                   |
+| <code class="scia-code">--scia-color-secondary-soft</code>   | Subtle secondary background              |
+| <code class="scia-code">--scia-color-secondary-strong</code> | Emphasis variant                         |
+| <code class="scia-code">--scia-color-on-secondary</code>     | Text/icon color on secondary backgrounds |
+
+
+<br/>
+
+### Status roles
+| Role                        | Description          |
+| :-- | :-- |
+| <code class="scia-code">--scia-color-success</code>      | Success state        |
+| <code class="scia-code">--scia-color-success-soft</code> | Success background   |
+| <code class="scia-code">--scia-color-warning</code>      | Warning state        |
+| <code class="scia-code">--scia-color-warning-soft</code> | Warning background   |
+| <code class="scia-code">--scia-color-danger</code>       | Error / danger state |
+| <code class="scia-code">--scia-color-danger-soft</code>  | Danger background    |
+| <code class="scia-code">--scia-color-info</code>         | Informational state  |
+| <code class="scia-code">--scia-color-info-soft</code>    | Info background      |
+
+
+<div class="scia-blockquote-warning">
+<span class="blockquote-paragraph">The exact variable names depend on your Scia CSS tokens file — keep your docs aligned with your real variables.</span>
+</div>
+
+<br/>
+---
+
+
+<h2 id="theme-structure" class="scia-h2 docs-subtitle">Theme structure</h2>
+
+Scia CSS can work in three modes:
+
+1. **Default (Light)** when no theme attribute is set
+2. **Manual Light/Dark** when <code class="scia-code">data-scia-theme</code> is explicitly set
+3. **Auto-Dark** when the user’s system preference is dark **and** no manual theme was chosen
+
+If you want to **keep Auto mode** and still override the palette, you should mirror the full structure below.
+
+<br/>
+
+### Example of overwrite while maintaining Auto mode
+
+```css
+/* 1) Default: Light theme (applies when no manual theme is selected) */
+:root {
+    /* override your Scia tokens here (light defaults) */
+    --scia-color-bg: #ffffff;
+    --scia-color-surface: #f8fafc;
+    --scia-color-text: #0f172a;
+    ...
+}
+
+/* 2) Manual Light mode (wins over everything when explicitly set) */
+:root[data-scia-theme="light"] {
+    /* optional: only needed if you want manual-light to differ from :root */
+    --scia-color-bg: #ffffff;
+    --scia-color-surface: #f8fafc;
+    --scia-color-text: #0f172a;
+    ...
+}
+
+/* 3) Manual Dark mode (wins over everything when explicitly set) */
+:root[data-scia-theme="dark"] {
+    --scia-color-bg: #0b1220;
+    --scia-color-surface: #111a2b;
+    --scia-color-text: #e5e7eb;
+    ...
+}
+
+/* 4) Auto-Dark:
+   if the user prefers dark at OS level AND data-scia-theme is NOT set */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-scia-theme]) {
+    /* usually matches the same values as manual dark */
+    --scia-color-bg: #0b1220;
+    --scia-color-surface: #111a2b;
+    --scia-color-text: #e5e7eb;
+    ...
+  }
+}
+```
+
+<br/>
+
+### Why this structure?
+- <code class="scia-code">:root</code> defines the default palette (commonly light).
+- <code class="scia-code">:root[data-scia-theme="light"]</code> and <code class="scia-code">:root[data-scia-theme="dark"]</code> define manual overrides.
+- The <code class="scia-code">@media (prefers-color-scheme: dark)</code> rule only applies when no manual theme is selected, thanks to <code class="scia-code">:root:not([data-scia-theme])</code>.
+
+This gives you:
+- a reliable default
+- a manual switch option
+- automatic system-based dark mode without extra JavaScript
+
+
+<br/>
+
+### Overriding only one mode (optional)
+If your project does **not** need Auto mode, you can override only the theme you use:
+
+- **Light-only project:** override <code class="scia-code">:root</code> (and optionally <code class="scia-code">:root[data-scia-theme="light"]</code>)
+- **Dark-only project:** override <code class="scia-code">:root[data-scia-theme="dark"]</code> (or set the attribute permanently)

@@ -1,0 +1,110 @@
+.menuOverlay{
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.45);
+    backdrop-filter: blur(24px);
+    z-index: 1000000000;
+    top: 0;
+}
+
+.menuOverlay[data-state="open"] {
+    animation: menuFadeIn var(--scia-transition-medium) var(--scia-ease-default);
+}
+.menuOverlay[data-state="closed"] {
+    animation: menuFadeOut var(--scia-transition-medium) var(--scia-ease-default);
+}
+
+
+.menuDrawer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: var(--scia-color-bg);
+    opacity: .9;
+    
+    color: var(--scia-color-text);
+    border-left: 1px solid var(--scia-color-border);
+    padding: 4rem;
+    z-index: 1000000000000;
+
+    transition: 
+        transform var(--scia-transition-slow) var(--scia-ease-default);
+}
+
+.menuDrawer[data-state="open"] {
+    animation: menuSlideIn var(--scia-transition-slow) var(--scia-ease-default) both;
+}
+.menuDrawer[data-state="closed"] {
+    animation: menuSlideOut var(--scia-transition-slow) var(--scia-ease-default) both;
+}
+
+.menuHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.menuNav{
+    display: grid;
+    gap: 0;
+}
+
+.mainItemGroup {
+    display: block;
+}
+
+.mainItemGroup > .childrenGroup {
+    padding: 0 1rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.mainItemGroup > .childrenGroup > .childItem {
+    border-left: 1px solid var(--scia-color-text-muted);
+    padding: .6rem 1rem;
+    border-radius: 0;
+}
+
+
+.topItem:hover,
+.topItem:active,
+.childItem:hover,
+.childItem:active {
+    transform: scale(1.05);
+}
+
+.topItem:hover::after,
+.topItem:active::after,
+.childItem:hover::after,
+.childItem:active::after {
+    display: none;
+}
+
+
+
+@keyframes menuSlideIn{
+  from { transform: translate3d(-100%, 0, 0); }
+  to   { transform: translate3d(0, 0, 0); }
+}
+
+@keyframes menuSlideOut{
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-100%, 0, 0); }
+}
+
+
+@keyframes menuFadeIn{
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes menuFadeOut{
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}

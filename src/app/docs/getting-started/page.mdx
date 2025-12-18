@@ -1,0 +1,85 @@
+<h1 id="intro" class="docs-title scia-typo-uppercase scia-typo-normal scia-typo-black">Getting Started</h1>
+
+<p class="intro">
+Scia CSS is a lightweight, token-based CSS framework focused on clean defaults and fast UI building.
+It ships with design tokens, light/dark themes, typography helpers, and a growing set of components.
+</p>
+
+<div class="scia-blockquote-warning">
+<p>**Note on colors**</p>
+<p class="blockquote-paragraph">The colors shown in these examples come from the theme used by this documentation site. Scia CSS does not enforce a fixed color palette: all colors are **token-based** and can be fully customized.</p>
+<p>See the [Themes documentation](/docs/themes) to learn how to override or define your own theme.</p>
+</div>
+
+<br/>
+
+---
+
+
+<h2 id='installation' class="scia-h2 docs-subtitle">Installation</h2>
+
+
+### Use the CDN
+
+Add Scia CSS in the <code class="scia-code">```<head>```</code> of your HTML:
+
+
+```html
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/lorenzo-petrecca/SciaCss@v0.1.0/dist/scia.min.css"
+/>
+```
+<br/>
+
+If you prefer a readable (non-minified) file for debugging:
+
+```html
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/lorenzo-petrecca/SciaCss@v0.1.0/dist/scia.css"
+/>
+```
+
+<br/>
+
+---
+
+
+
+<h2 id='themes' class="scia-h2 docs-subtitle">Themes</h2>
+
+Scia CSS supports **light**, **dark**, and **system (auto)** themes.
+
+<br/>
+
+### Auto (default)
+By default, Scia CSS follows the system theme preference.
+
+<br/>
+
+### Force a theme
+To force a theme, set the <code class="scia-code">data-scia-theme</code> attribute on the root element:
+
+```html
+<html data-scia-theme="light">...</html>
+<html data-scia-theme="dark">...</html>
+```
+
+<div class="scia-blockquote-info">
+<span class="blockquote-paragraph">You can toggle this attribute at runtime from JavaScript if you want a theme switcher.</span>
+</div>
+
+<br/>
+
+---
+
+
+<h2 id='project-structure' class="scia-h2 docs-subtitle">Project Structure</h2>
+
+Scia CSS is organized in small modules (tokens, themes, typography, buttons, forms, utilities…).
+In the repository you’ll typically find:
+
+- <code class="scia-code">src/</code> → source modules.
+- <code class="scia-code">dist/</code> → built output.
+- <code class="scia-code">playground/</code> → local sandbox to test styles quickly.
