@@ -251,7 +251,41 @@ export const docsNavItems = [
         href: '/docs/tokens',
         label: 'Tokens',
         sections: [
-
+            {
+                id: 1,
+                anchor: 'how-override',
+                label: 'How to override',
+            },
+            {
+                id: 2,
+                anchor: 'typography-tokens',
+                label: 'Typography tokens',
+            },
+            {
+                id: 3,
+                anchor: 'radii-tokens',
+                label: 'Radii tokens',
+            },
+            {
+                id: 4,
+                anchor: 'shadow-tokens',
+                label: 'Shadow tokens',
+            },
+            {
+                id: 5,
+                anchor: 'transitions-tokens',
+                label: 'Transitions tokens',
+            },
+            {
+                id: 6,
+                anchor: 'spacing-tokens',
+                label: 'Spacing tokens',
+            },
+            {
+                id: 7,
+                anchor: 'recommended',
+                label: 'Recommended approach',
+            },
         ],
     },
 ];
