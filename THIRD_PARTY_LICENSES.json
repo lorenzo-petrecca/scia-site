@@ -362,6 +362,108 @@
     "path": "/Users/lorenzo/scia-site/node_modules/@nolyfill/is-core-module",
     "licenseFile": "/Users/lorenzo/scia-site/node_modules/@nolyfill/is-core-module/LICENSE"
   },
+  "@radix-ui/primitive@1.1.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/radix-ui/primitives",
+    "path": "/Users/lorenzo/scia-site/node_modules/@radix-ui/primitive",
+    "licenseFile": "/Users/lorenzo/scia-site/node_modules/@radix-ui/primitive/LICENSE"
+  },
+  "@radix-ui/react-compose-refs@1.1.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/radix-ui/primitives",
+    "path": "/Users/lorenzo/scia-site/node_modules/@radix-ui/react-compose-refs",
+    "licenseFile": "/Users/lorenzo/scia-site/node_modules/@radix-ui/react-compose-refs/README.md"
+  },
+  "@radix-ui/react-context@1.1.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/radix-ui/primitives",
+    "path": "/Users/lorenzo/scia-site/node_modules/@radix-ui/react-context",
+    "licenseFile": "/Users/lorenzo/scia-site/node_modules/@radix-ui/react-context/README.md"
+  },
+  "@radix-ui/react-dialog@1.1.15": {
+    "licenses": "MIT",
+    "repository": "https://github.com/radix-ui/primitives",
+    "path": "/Users/lorenzo/scia-site/node_modules/@radix-ui/react-dialog",
+    "licenseFile": "/Users/lorenzo/scia-site/node_modules/@radix-ui/react-dialog/LICENSE"
+  },
+  "@radix-ui/react-dismissable-layer@1.1.11": {
+    "licenses": "MIT",
+    "repository": "https://github.com/radix-ui/primitives",
+    "path": "/Users/lorenzo/scia-site/node_modules/@radix-ui/react-dismissable-layer",
+    "licenseFile": "/Users/lorenzo/scia-site/node_modules/@radix-ui/react-dismissable-layer/LICENSE"
+  },
+  "@radix-ui/react-focus-guards@1.1.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/radix-ui/primitives",
+    "path": "/Users/lorenzo/scia-site/node_modules/@radix-ui/react-focus-guards",
+    "licenseFile": "/Users/lorenzo/scia-site/node_modules/@radix-ui/react-focus-guards/LICENSE"
+  },
+  "@radix-ui/react-focus-scope@1.1.7": {
+    "licenses": "MIT",
+    "repository": "https://github.com/radix-ui/primitives",
+    "path": "/Users/lorenzo/scia-site/node_modules/@radix-ui/react-focus-scope",
+    "licenseFile": "/Users/lorenzo/scia-site/node_modules/@radix-ui/react-focus-scope/LICENSE"
+  },
+  "@radix-ui/react-id@1.1.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/radix-ui/primitives",
+    "path": "/Users/lorenzo/scia-site/node_modules/@radix-ui/react-id",
+    "licenseFile": "/Users/lorenzo/scia-site/node_modules/@radix-ui/react-id/README.md"
+  },
+  "@radix-ui/react-portal@1.1.9": {
+    "licenses": "MIT",
+    "repository": "https://github.com/radix-ui/primitives",
+    "path": "/Users/lorenzo/scia-site/node_modules/@radix-ui/react-portal",
+    "licenseFile": "/Users/lorenzo/scia-site/node_modules/@radix-ui/react-portal/LICENSE"
+  },
+  "@radix-ui/react-presence@1.1.5": {
+    "licenses": "MIT",
+    "repository": "https://github.com/radix-ui/primitives",
+    "path": "/Users/lorenzo/scia-site/node_modules/@radix-ui/react-presence",
+    "licenseFile": "/Users/lorenzo/scia-site/node_modules/@radix-ui/react-presence/LICENSE"
+  },
+  "@radix-ui/react-primitive@2.1.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/radix-ui/primitives",
+    "path": "/Users/lorenzo/scia-site/node_modules/@radix-ui/react-primitive",
+    "licenseFile": "/Users/lorenzo/scia-site/node_modules/@radix-ui/react-primitive/LICENSE"
+  },
+  "@radix-ui/react-slot@1.2.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/radix-ui/primitives",
+    "path": "/Users/lorenzo/scia-site/node_modules/@radix-ui/react-slot",
+    "licenseFile": "/Users/lorenzo/scia-site/node_modules/@radix-ui/react-slot/LICENSE"
+  },
+  "@radix-ui/react-use-callback-ref@1.1.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/radix-ui/primitives",
+    "path": "/Users/lorenzo/scia-site/node_modules/@radix-ui/react-use-callback-ref",
+    "licenseFile": "/Users/lorenzo/scia-site/node_modules/@radix-ui/react-use-callback-ref/README.md"
+  },
+  "@radix-ui/react-use-controllable-state@1.2.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/radix-ui/primitives",
+    "path": "/Users/lorenzo/scia-site/node_modules/@radix-ui/react-use-controllable-state",
+    "licenseFile": "/Users/lorenzo/scia-site/node_modules/@radix-ui/react-use-controllable-state/LICENSE"
+  },
+  "@radix-ui/react-use-effect-event@0.0.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/radix-ui/primitives",
+    "path": "/Users/lorenzo/scia-site/node_modules/@radix-ui/react-use-effect-event",
+    "licenseFile": "/Users/lorenzo/scia-site/node_modules/@radix-ui/react-use-effect-event/LICENSE"
+  },
+  "@radix-ui/react-use-escape-keydown@1.1.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/radix-ui/primitives",
+    "path": "/Users/lorenzo/scia-site/node_modules/@radix-ui/react-use-escape-keydown",
+    "licenseFile": "/Users/lorenzo/scia-site/node_modules/@radix-ui/react-use-escape-keydown/README.md"
+  },
+  "@radix-ui/react-use-layout-effect@1.1.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/radix-ui/primitives",
+    "path": "/Users/lorenzo/scia-site/node_modules/@radix-ui/react-use-layout-effect",
+    "licenseFile": "/Users/lorenzo/scia-site/node_modules/@radix-ui/react-use-layout-effect/README.md"
+  },
   "@rtsao/scc@1.1.0": {
     "licenses": "MIT",
     "repository": "https://github.com/rtsao/scc",
@@ -631,6 +733,14 @@
     "repository": "https://github.com/nodeca/argparse",
     "path": "/Users/lorenzo/scia-site/node_modules/argparse",
     "licenseFile": "/Users/lorenzo/scia-site/node_modules/argparse/LICENSE"
+  },
+  "aria-hidden@1.2.6": {
+    "licenses": "MIT",
+    "repository": "https://github.com/theKashey/aria-hidden",
+    "publisher": "Anton Korzunov",
+    "email": "thekashey@gmail.com",
+    "path": "/Users/lorenzo/scia-site/node_modules/aria-hidden",
+    "licenseFile": "/Users/lorenzo/scia-site/node_modules/aria-hidden/LICENSE"
   },
   "aria-query@5.3.2": {
     "licenses": "Apache-2.0",
@@ -1119,6 +1229,13 @@
     "email": "npm@lovell.info",
     "path": "/Users/lorenzo/scia-site/node_modules/detect-libc",
     "licenseFile": "/Users/lorenzo/scia-site/node_modules/detect-libc/LICENSE"
+  },
+  "detect-node-es@1.1.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/thekashey/detect-node",
+    "publisher": "Ilya Kantor",
+    "path": "/Users/lorenzo/scia-site/node_modules/detect-node-es",
+    "licenseFile": "/Users/lorenzo/scia-site/node_modules/detect-node-es/LICENSE"
   },
   "devlop@1.1.0": {
     "licenses": "MIT",
@@ -1639,6 +1756,14 @@
     "email": "ljharb@gmail.com",
     "path": "/Users/lorenzo/scia-site/node_modules/get-intrinsic",
     "licenseFile": "/Users/lorenzo/scia-site/node_modules/get-intrinsic/LICENSE"
+  },
+  "get-nonce@1.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/theKashey/get-nonce",
+    "publisher": "Anton Korzunov",
+    "email": "thekashey@gmail.com",
+    "path": "/Users/lorenzo/scia-site/node_modules/get-nonce",
+    "licenseFile": "/Users/lorenzo/scia-site/node_modules/get-nonce/LICENSE"
   },
   "get-proto@1.0.1": {
     "licenses": "MIT",
@@ -3327,6 +3452,30 @@
     "path": "/Users/lorenzo/scia-site/node_modules/react-is",
     "licenseFile": "/Users/lorenzo/scia-site/node_modules/react-is/LICENSE"
   },
+  "react-remove-scroll-bar@2.3.8": {
+    "licenses": "MIT",
+    "repository": "https://github.com/theKashey/react-remove-scroll-bar",
+    "publisher": "Anton Korzunov",
+    "email": "thekashey@gmail.com",
+    "path": "/Users/lorenzo/scia-site/node_modules/react-remove-scroll-bar",
+    "licenseFile": "/Users/lorenzo/scia-site/node_modules/react-remove-scroll-bar/README.md"
+  },
+  "react-remove-scroll@2.7.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/theKashey/react-remove-scroll",
+    "publisher": "Anton Korzunov",
+    "email": "thekashey@gmail.com",
+    "path": "/Users/lorenzo/scia-site/node_modules/react-remove-scroll",
+    "licenseFile": "/Users/lorenzo/scia-site/node_modules/react-remove-scroll/LICENSE"
+  },
+  "react-style-singleton@2.2.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/theKashey/react-style-singleton",
+    "publisher": "Anton Korzunov",
+    "url": "thekashey@gmail.com",
+    "path": "/Users/lorenzo/scia-site/node_modules/react-style-singleton",
+    "licenseFile": "/Users/lorenzo/scia-site/node_modules/react-style-singleton/LICENSE"
+  },
   "react@19.2.1": {
     "licenses": "MIT",
     "repository": "https://github.com/facebook/react",
@@ -4141,6 +4290,22 @@
     "email": "gary.court@gmail.com",
     "path": "/Users/lorenzo/scia-site/node_modules/uri-js",
     "licenseFile": "/Users/lorenzo/scia-site/node_modules/uri-js/LICENSE"
+  },
+  "use-callback-ref@1.3.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/theKashey/use-callback-ref",
+    "publisher": "theKashey",
+    "email": "thekashey@gmail.com",
+    "path": "/Users/lorenzo/scia-site/node_modules/use-callback-ref",
+    "licenseFile": "/Users/lorenzo/scia-site/node_modules/use-callback-ref/LICENSE"
+  },
+  "use-sidecar@1.1.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/theKashey/use-sidecar",
+    "publisher": "theKashey",
+    "email": "thekashey@gmail.com",
+    "path": "/Users/lorenzo/scia-site/node_modules/use-sidecar",
+    "licenseFile": "/Users/lorenzo/scia-site/node_modules/use-sidecar/LICENSE"
   },
   "util-extend@1.0.3": {
     "licenses": "MIT",
