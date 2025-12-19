@@ -28,6 +28,6 @@ export default function sitemap () {
 
     return paths.map((path) => ({
         url: `${baseUrl}/`,
-        lastModified: newDate(),
+        lastModified: new Date(),
     }));
 }
