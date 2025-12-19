@@ -16,6 +16,9 @@ const logo = Fredoka({
 export const metadata = {
     title: "Scia - CSS Framework",
     description: "Docs for Scia CSS",
+    verification: {
+        google: "GcpJ3nISTiX1nWxx55-niIqdgCrgXljIl_694JG6ZmI",
+    },
 };
 
 export default function RootLayout({ children }) {
