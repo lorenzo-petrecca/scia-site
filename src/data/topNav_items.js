@@ -5,6 +5,7 @@ export const topNavItems = [
         href: "/",
         label: "Docs",
         target: "",
+        external: false,
     },
     {
         id: 2,
@@ -12,6 +13,7 @@ export const topNavItems = [
         href: "/about",
         label: "About",
         target: "",
+        external: false,
     },
     {
         id: 3,
@@ -19,5 +21,6 @@ export const topNavItems = [
         href: "https://github.com/lorenzo-petrecca/SciaCss",
         label: "GitHub",
         target: "_blank",
+        external: true,
     },
 ];
