@@ -2,12 +2,11 @@ import { topNavItems } from "@/data/topNav_items";
 import { docsNavItems } from "@/data/docsNav_items";
 
 
-function normalizePath(p) {
-  if (!p) return "/";
-  let path = String(p).trim();
-  if (!path.startsWith("/")) path = `/${path}`;
-  if (path.length > 1) path = path.replace(/\/+$/, "");
-  return path;
+function normalizePath(path) {
+    let p = String(path).trim();
+    if (!p.startsWith("/")) p = `/${p}`;
+    if (p.length > 1) p = p.replace(/\/+$/, "");
+    return p;
 }
 
 export default function sitemap () {
