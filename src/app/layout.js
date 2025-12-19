@@ -19,11 +19,35 @@ export const metadata = {
     verification: {
         google: "GcpJ3nISTiX1nWxx55-niIqdgCrgXljIl_694JG6ZmI",
     },
+    icons: {
+        icon: [
+            { url: "/favicon-48.png", sizes: "48x48", type: "image/png" },
+            { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
+        ],
+    },
 };
 
+
 export default function RootLayout({ children }) {
+    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://sciacss.vercel.app";
+    
+    const websiteJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        name: "Scia CSS",
+        alternateName: "Scia – CSS Framework",
+        url: baseUrl,
+    };
+
+
     return (
         <html lang="en" data-scia-theme="dark">
+            <head>
+                <script
+                  type="application/ld+json"
+                  dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+                />
+            </head>
             <body className={`${mono.variable}`}>
                 <TopNav logoFont={logo} />
                 {children}
