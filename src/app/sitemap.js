@@ -1,5 +1,5 @@
-import { topNavItems } from "@/data/topNav_items";
-import { docsNavItems } from "@/data/docsNav_items";
+import { topNavItems } from "../data/topNav_items";
+import { docsNavItems } from "../data/docsNav_items";
 
 
 function normalizePath(path) {
