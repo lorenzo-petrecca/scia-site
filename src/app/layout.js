@@ -54,7 +54,10 @@ export default function RootLayout({ children }) {
                     <div 
                         className="footer-item footer-copyright scia-flex scia-flex-wrap scia-justify-center scia-typo-xsmall scia-color-muted"
                     >
-                        <span className="scia-margin-r-8">© { new Date().getFullYear() }</span> Scia CSS - MIT Licensed
+                        <div className="scia-flex scia-flex-col scia-justify-center scia-items-center scia-gap-8">
+                            <span><span className="scia-margin-r-8">© { new Date().getFullYear() }</span> Lorenzo Petrecca - Scia CSS - All rights reserved.</span>
+                            <span className="scia-block">Scia CSS Framework - MIT Licensed</span>
+                        </div>
                     </div>
                 </footer>
 
